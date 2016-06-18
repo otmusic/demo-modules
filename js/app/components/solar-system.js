@@ -16,42 +16,50 @@ define('components/solar-system', [
                 {
                     name : 'Mercury',
                     distance : 58,
-                    year : 58 / 365.3
+                    earthDate: 87.97
+                    // year : 87.97 / 365.3
                 },
                 {
                     name : 'Venus',
                     distance : 108.2,
-                    year : 224.7 / 365.3
+                    earthDate: 224.7
+                    // year : 224.7 / 365.3
                 },
                 {
                     name : 'Earth',
                     distance : 149.6,
-                    year : 365.3 / 365.3
+                    earthDate: 365.3
+                    // year : 365.3 / 365.3
                 },
                 {
                     name : 'Mars',
                     distance : 227.9,
-                    year : 687 / 365.3
+                    earthDate: 686.76
+                    // year : 686.76 / 365.3
                 },
                 {
                     name : 'Jupiter',
                     distance : 778,
-                    year : 11.9
+                    earthDate: 4332.45,
+                    year : 4332.45 / 11.9
                 },
                 {
                     name : 'Saturn',
-                    distance : 1427 ,
-                    year : 29.46
+                    distance : 1427,
+                    earthDate: 10761.73
+                    // year : 10761.73 / 29.46
                 },
                 {
                     name : 'Uranus',
                     distance : 2871,
-                    year : 84
+                    earthDate: 30692.5
+                    // year : 30692.5 / 84
                 },
                 {
                     name : 'Neptune',
                     distance : 4497,
-                    year : 164.8
+                    earthDate: 60194.13
+                    // year : 60194.13 / 164.8
                 }
             ]
         };
@@ -84,8 +92,6 @@ define('components/solar-system', [
                 var newPlanet = new Planet(planetData, $(this.planetTpl));
 
                 this.planetsInstances.push(newPlanet);
-
-
 
             }.bind(this));
 

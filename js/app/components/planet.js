@@ -1,14 +1,11 @@
-define('components/planet', [
+'use strict';
 
-    'jquery'
-
-], function (
-
-    $
-
-) {
+define('components/planet', [], function () {
 
     function Planet (data, $el) {
+
+        const EARTH_DAY = 365.3;
+        var year = 0;
 
         this.model = data;
 
@@ -24,18 +21,26 @@ define('components/planet', [
 
         };
 
+        this.gonePlanetYear = function (planet) {
+            year += 1;
+            var planetaryElapsedTime = ((year * EARTH_DAY) / planet.model.earthDate).toFixed(2);
+            planet.tpl.timesAround.text(planetaryElapsedTime);
+        };
+
         this.renderStatic();
+
+
     }
 
     Planet.prototype = {
 
         renderStatic : function () {
 
+            var objectPlanet = this;
             this.tpl.name.text(this.model.name);
-
             this.tpl.distance.text(this.model.distance);
+            setInterval(function () { objectPlanet.gonePlanetYear(objectPlanet) }, 300);
 
-            this.tpl.timesAround.text(0);
         }
 
     };

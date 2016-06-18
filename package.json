@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/powerbot15/demo-modules.git"
+    "url": "git+https://github.com/otmusic/demo-modules.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/powerbot15/demo-modules/issues"
+    "url": "https://github.com/otmusic/demo-modules/issues"
   },
-  "homepage": "https://github.com/powerbot15/demo-modules#readme",
+  "homepage": "https://github.com/otmusic/demo-modules#readme",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
